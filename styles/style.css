@@ -367,6 +367,7 @@ img {
   justify-content: center;
   min-height: 550px;
   position: relative;
+  background-color: #fff;
 }
 
 .quiz__inner {
@@ -376,6 +377,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
+  min-height: 530px;
   background: url("./../assets/quiz/quiz-bg.png") no-repeat center center;
 }
 
@@ -524,6 +526,7 @@ input[type="radio"]:checked+.radio-visual::after {
   gap: 20px;
   width: 100%;
   justify-content: center;
+  margin-top:  auto;
 }
 
 button {
@@ -1236,8 +1239,11 @@ button:active {
     right: 0;
   }
 
-  .work__list-item-title {
-    justify-content: end;
+  .step-2 .work__list-item-title {
+    justify-content: center;
+  }
+  .step-1 .work__list-item-title {
+    justify-content: center;
   }
 
   .step-2 .work__list-item-title {
@@ -1730,6 +1736,9 @@ button:active {
 .modal__reception-input::placeholder {
   color: rgba(51, 48, 48, 0.2);
 }
+.modal__call-input::placeholder {
+  color: rgba(51, 48, 48, 0.2);
+}
 
 .modal__reception-btn,
 .modal__call-btn {
@@ -1793,4 +1802,8 @@ button:active {
   .modal__call-btn {
     max-width: none;
   }
+}
+
+input[type="checkbox"]{
+  flex-shrink: 0;
 }

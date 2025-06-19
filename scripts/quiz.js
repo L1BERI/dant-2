@@ -122,15 +122,21 @@ class Quiz {
     }
 
     handleNext() {
-        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-        
+        const selectedAnswer = this.root.querySelector('input[name="answer"]:checked');
         if (!selectedAnswer) {
             this.showError('Пожалуйста, выберите ответ');
             return;
         }
-
-        this.answers[`question${this.currentStep + 1}`] = selectedAnswer.value;
-
+        const answerText = selectedAnswer.closest('label').querySelector('.answer-text')?.textContent || selectedAnswer.value;
+        this.answers[`question${this.currentStep + 1}`] = answerText;
+        let hiddenInput = this.root.querySelector(`input[name="question${this.currentStep + 1}"]`);
+        if (!hiddenInput) {
+            hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = `question${this.currentStep + 1}`;
+            this.root.querySelector('form')?.appendChild(hiddenInput);
+        }
+        hiddenInput.value = answerText;
         if (this.currentStep < quizData.length - 2) {
             this.currentStep++;
             this.renderQuestion();
@@ -182,11 +188,29 @@ class Quiz {
         this.prevButton.style.display = this.currentStep > 0 ? 'block' : 'none';
         this.nextButton.style.dblockay = this.currentStep < quizData.length - 1 ? 'block' : 'none';
     }
+
+    syncAnswersToForm() {
+        const form = this.root.querySelector('form');
+        if (!form) return;
+       
+        Array.from(form.querySelectorAll('input[type="hidden"][name^="question"]')).forEach(input => input.remove());
+       
+        Object.entries(this.answers).forEach(([key, value]) => {
+            let input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            form.appendChild(input);
+        });
+    }
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.quiz').forEach(quizEl => new Quiz(quizEl));
+    document.querySelectorAll('.quiz').forEach(quizEl => {
+        const quizInstance = new Quiz(quizEl);
+        quizEl.__quizInstance = quizInstance;
+    });
 
    
     function validatePhone(phone) {
@@ -211,14 +235,15 @@ document.addEventListener('DOMContentLoaded', () => {
         msg.style.opacity = '1';
         setTimeout(() => { msg.style.opacity = '0'; }, 4000);
     }
-    function disableForm(form, disabled = true) {
-        form.querySelectorAll('button, input, textarea').forEach(el => {
-            el.disabled = disabled;
-        });
-    }
+ 
     function handleFormSubmit(e) {
         e.preventDefault();
         const form = e.target;
+        const quizRoot = form.closest('.quiz');
+        
+        if (quizRoot && quizRoot.__quizInstance) {
+            quizRoot.__quizInstance.syncAnswersToForm();
+        }
         const phoneInput = form.querySelector('input[name="phone"]') || form.querySelector('input[type="tel"]');
         const agreeInput = form.querySelector('input[name="agree"], input[name="politic"]');
         const phone = phoneInput ? phoneInput.value.trim() : '';
@@ -233,8 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
             agreeInput && agreeInput.focus();
             return;
         }
-        disableForm(form, true);
+       
         const formData = new FormData(form);
+    
         fetch('send.php', {
             method: 'POST',
             body: formData
@@ -243,15 +269,17 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(() => {
             showFormMessage(form, 'Спасибо! Мы свяжемся с вами в ближайшее время.');
             form.reset();
+            setTimeout(() => {
+                window.location.href = 'thanks.html';
+            }, 800);
         })
         .catch(() => {
             showFormMessage(form, 'Ошибка отправки. Попробуйте позже.', true);
         })
-        .finally(() => {
-            disableForm(form, false);
-        });
+       
     }
     document.querySelectorAll('[data-quiz-form], [data-reception-form], [data-call-form]').forEach(form => {
+        form.removeEventListener('submit', handleFormSubmit); 
         form.addEventListener('submit', handleFormSubmit);
     });
 

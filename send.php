@@ -34,6 +34,16 @@ if ($formType === 'Квиз (quiz-form)') {
     $body .= "<b>Телефон:</b> $phone<br>";
     $body .= "<b>Проблема (вопрос) клиента:</b> $quest<br>";
     $body .= "<b>Нажатая кнопка:</b> $hidden_btn<br>";
+    // Добавляем ответы на вопросы квиза
+    $quizAnswers = '';
+    foreach ($_POST as $key => $value) {
+        if (preg_match('/^question[0-9]+$/', $key)) {
+            $quizAnswers .= "<b>Ответ на $key:</b> ".htmlspecialchars($value)."<br>";
+        }
+    }
+    if ($quizAnswers) {
+        $body .= "<br><b>Ответы на вопросы квиза:</b><br>" . $quizAnswers;
+    }
 } else if ($formType === 'Звонок (call-form)') {
     $body .= "<b>Имя:</b> $name<br>";
     $body .= "<b>Телефон:</b> $phone<br>";
