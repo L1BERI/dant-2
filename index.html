@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Лечение кисты зубов под микроскопом в Самаре</title>
+  </head>
+  <body>
+    <div id="app">        
+      <div class="modal__quiz" data-calc-modal>
+        <div class="modal__quiz-inner">
+          <button class="modal__close-btn" modal-quiz-close>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.996704 1.00049L26.4525 26.4563" stroke="white" stroke-width="2" stroke-linecap="round" />
+              <path d="M0.996704 26.4565L26.4525 1.0007" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="quiz">
+            <div class="quiz__inner">
+                <div class="quiz__top">
+                    <span class="quiz__step">
+                        Шаг <span data-quiz-start-step>1</span> из <span data-quiz-last-step>4</span>
+                    </span>
+                    <div class="quiz__bar">
+                        <span class="quiz__bar-complete"></span>
+                    </div>
+                </div>
+                <span class="quiz__question" data-quiz-question>На что жалуетесь?</span>
+                <ul class="quiz__answers">
+                    <li class="quiz__answers-item">
+                        <label class="custom-checkbox">
+                            <input type="radio" name="complaint" value="pain">
+                            <span class="checkmark"></span>
+                            <span class="answer-text">Болит зуб</span>
+                        </label>
+                    </li>
+                    <li class="quiz__answers-item">
+                        <label class="custom-checkbox">
+                            <input type="radio" name="complaint" value="swelling">
+                            <span class="checkmark"></span>
+                            <span class="answer-text">Опухла десна</span>
+                        </label>
+                    </li>
+                    <li class="quiz__answers-item">
+                        <label class="custom-checkbox">
+                            <input type="radio" name="complaint" value="cyst">
+                            <span class="checkmark"></span>
+                            <span class="answer-text">Обнаружили кисту</span>
+                        </label>
+                    </li>
+                    <li class="quiz__answers-item">
+                        <label class="custom-checkbox">
+                            <input type="radio" name="complaint" value="other">
+                            <span class="checkmark"></span>
+                            <span class="answer-text">Другое</span>
+                        </label>
+                    </li>
+                </ul>
+                <div class="quiz__btns">
+                  <button class="quiz__prev-btn" data-quiz-prev>Назад</button>
+                  <button class="quiz__next-btn" data-quiz-next>Далее</button>
+                </div>
+            </div>
+            <div class="contact-form" style="display: none;">
+                  <h2 class="contact-form__title">Оставьте свой номер телефона и получите расчёт в течение дня</h2>
+                  <div class="contact-form__content">
+                    <form class="contact-form__form" id="contactForm" data-quiz-form>
+                      <div class="form-group">
+                          <input type="tel" name="phone" placeholder="Ваш телефон*" required>
+                      </div>
+                      <label class="contact-form__radio">
+                        <input type="checkbox" name="agree" checked value="agree">
+                        <span class="contact-form__radio-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span>
+                      </label>
+                      <button type="submit" class="contact-form__submit">Получить расчёт</button>
+                  </form>
+                  <ul class="contact__form-list">
+                    <li class="contact__form-list-item">
+                      <img src="./assets/form-1.png" alt="">
+                      Вам два подарказа прохождение теста:
+                    </li>
+                    <li class="contact__form-list-item">
+                      <img src="./assets/form-2.png" alt="">
+                      Персональный расчёт лечения
+                    </li>
+                    <li class="contact__form-list-item">
+                      <img src="./assets/form-3.png" alt="">
+                      Бесплатный рентген снимок зубов
+                    </li>
+                  </ul>
+                  </div>
+                
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="modal__reception" data-reception-modal>
+        <div class="modal__reception-inner">
+          <button class="modal__close-btn" modal-reception-close>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.996704 1.00049L26.4525 26.4563" stroke="white" stroke-width="2" stroke-linecap="round" />
+              <path d="M0.996704 26.4565L26.4525 1.0007" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <form class="reception-form" data-reception-form>
+            <span class="modal__reception-title">Запишитесь на бесплатный осмотр</span>
+           
+              <div class="modal__reception-form-group">
+                <input type="text" class="modal__reception-input" name="phone" placeholder="Ваш телефон*">
+                <button type="submit" class="modal__reception-btn">Записаться</button>
+              </div>
+              <label class="reception__form-text">
+                <input type="checkbox" name="agree" checked value="agree">
+                <span class="reception__form-text-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span>
+              </label>
+              
+          </form>
+        </div>
+      </div>
+      <div class="modal__call" data-call-modal>
+        <div class="modal__call-inner">
+          <button class="modal__close-btn" modal-call-close>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.996704 1.00049L26.4525 26.4563" stroke="white" stroke-width="2" stroke-linecap="round" />
+              <path d="M0.996704 26.4565L26.4525 1.0007" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <form class="call-form" data-call-form>
+            <span class="modal__call-title">Заказать звонок</span>
+            <span class="modal__call-subtitle">ответим в ближайшее время</span>
+           
+              <div class="modal__call-form-group">
+                <input type="text" class="modal__call-input" name="phone" placeholder="Ваш телефон*" required>
+                <button type="submit" class="modal__call-btn">Заказать звонок</button>
+              </div>
+              <label class="call__form-text">
+                <input type="checkbox" name="agree" checked value="agree">
+                <span class="call__form-text-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span>
+              </label>
+              
+          </form>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container header__container">
+          <a href="/" class="header__logo">
+            <img src="./assets/header-logo.png" alt="Логотип сайта" />
+          </a>
+          <p class="header__text">
+            Лечение кисты зубов под микроскопом в Самаре
+          </p>
+          <div class="header__content">
+            <div class="header__phone">
+              <span class="header__phone-name">Звоните</span>
+              <a href="telto:+78463757205" class="header__phone-number">
+                <img src="./assets/header-phone.png" alt="" />
+                +7 (846) 375-72-05
+              </a>
+            </div>
+            <button class="header__btn" data-call-btn>
+              Заказать звонок
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <div class="container hero__container">
+            <div class="hero__upper">
+              <h1 class="hero__title">
+                Киста на корне зуба? Вам назначили удаление зуба?
+              </h1>
+              <div class="hero__upper-content">
+                <span class="hero__upper-text"
+                  >Вылечим кисту на корне зуба</span
+                >
+                <span class="hero__upper-text">под микроскопом</span>
+                <span class="hero__upper-text">за 1-3 приёма от 9550 ₽</span>
+              </div>
+            </div>
+            <div class="hero__middle">
+              <ul class="hero__teeth-list">
+                <li class="hero__teeth-item">
+                  <img src="./assets/hero-1.jpg" width="200" height="150" alt="" />
+                  <span class="hero__teeth-item-text">До</span>
+                </li>
+                <li class="hero__teeth-item">
+                  <img src="./assets/hero-2.jpg" width="200" height="150" alt="" />
+                  <span class="hero__teeth-item-text">После</span>
+                </li>
+              </ul>
+              <ul class="hero__adv-list">
+                <li class="hero__adv-item">
+                  <img src="./assets/hero-check.png" width="25" height="25" alt="" />
+                  <span>
+                    Спасём зуб с вероятностью 84%, даже если предыдущий врач
+                    велел удалять
+                  </span>
+                </li>
+                <li class="hero__adv-item">
+                  <img src="./assets/hero-check.png" width="25" height="25"  alt="" />
+                  <span> Гарантия 3 года </span>
+                </li>
+                <li class="hero__adv-item">
+                  <img src="./assets/hero-check.png" width="25" height="25"  alt="" />
+                  <span> Без боли! </span>
+                </li>
+              </ul>
+            </div>
+            <div class="hero__bottom">
+              <button class="hero__btn-cost" data-calc-btn>
+                Рассчитайте стоимость лечения для меня за 1 минуту
+              </button>
+              <button class="hero__btn-free" data-reception-btn>
+                Записаться на бесплатный
+осмотр под микроскопом
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="calc">
+            <div class="container calc__container">
+              <img src="./assets/calc-bg-1.png" alt="" class="calc__bg-1">
+              <img src="./assets/calc-bg-2.png" alt="" class="calc__bg-2">
+                <h2 class="calc__title">
+                    Рассчитайте цену работы именно для вас
+                </h2>
+                <p class="calc__text">Ответьте на 4 вопроса о вашей ситуации и узнайте точную стоимость лечения кисты именно в вашем случае</p>
+                <p class="calc__text">Это бесплатно и ни к чему вас не обязывает!</p>
+                <div class="quiz">
+                    <div class="quiz__inner">
+                        <div class="quiz__top">
+                            <span class="quiz__step">
+                                Шаг <span data-quiz-start-step>1</span> из <span data-quiz-last-step>4</span>
+                            </span>
+                            <div class="quiz__bar">
+                                <span class="quiz__bar-complete"></span>
+                            </div>
+                        </div>
+                        <span class="quiz__question" data-quiz-question>На что жалуетесь?</span>
+                        <ul class="quiz__answers">
+                            <li class="quiz__answers-item">
+                                <label class="custom-checkbox">
+                                    <input type="radio" name="complaint" value="pain">
+                                    <span class="checkmark"></span>
+                                    <span class="answer-text">Болит зуб</span>
+                                </label>
+                            </li>
+                            <li class="quiz__answers-item">
+                                <label class="custom-checkbox">
+                                    <input type="radio" name="complaint" value="swelling">
+                                    <span class="checkmark"></span>
+                                    <span class="answer-text">Опухла десна</span>
+                                </label>
+                            </li>
+                            <li class="quiz__answers-item">
+                                <label class="custom-checkbox">
+                                    <input type="radio" name="complaint" value="cyst">
+                                    <span class="checkmark"></span>
+                                    <span class="answer-text">Обнаружили кисту</span>
+                                </label>
+                            </li>
+                            <li class="quiz__answers-item">
+                                <label class="custom-checkbox">
+                                    <input type="radio" name="complaint" value="other">
+                                    <span class="checkmark"></span>
+                                    <span class="answer-text">Другое</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="quiz__btns">
+                          <button class="quiz__prev-btn" data-quiz-prev>Назад</button>
+                          <button class="quiz__next-btn" data-quiz-next>Далее</button>
+                        </div>
+                    </div>
+                    <div class="contact-form" style="display: none;">
+                          <h2 class="contact-form__title">Оставьте свой номер телефона и получите расчёт в течение дня</h2>
+                          <div class="contact-form__content">
+                            <form class="contact-form__form" id="contactForm" data-quiz-form>
+                              <div class="form-group">
+                                  <input type="tel" name="phone" placeholder="Ваш телефон*" required>
+                              </div>
+                              <label class="contact-form__radio">
+                                <input type="checkbox" name="agree" checked value="agree">
+                                <span class="contact-form__radio-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span>
+                              </label>
+                              <button type="submit" class="contact-form__submit">Получить расчёт</button>
+                          </form>
+                          <ul class="contact__form-list">
+                            <li class="contact__form-list-item">
+                              <img src="./assets/form-1.png" alt="">
+                              Вам два подарказа прохождение теста:
+                            </li>
+                            <li class="contact__form-list-item">
+                              <img src="./assets/form-2.png" alt="">
+                              Персональный расчёт лечения
+                            </li>
+                            <li class="contact__form-list-item">
+                              <img src="./assets/form-3.png" alt="">
+                              Бесплатный рентген снимок зубов
+                            </li>
+                          </ul>
+                          </div>
+                        
+                  </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="come">
+          <div class="container come__container">
+            <h2 class="come__title">С какими запросами чаще всего приходят?</h2>
+            <div class="come__content">
+              <ul class="come__list">
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    Зуб болит либо немного поднывает
+                  </span>
+                </li>
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    Опухает щека (флюс)
+                  </span>
+                </li>
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    Скололась пломба
+                  </span>
+                </li>
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    Зуб разрушился
+                  </span>
+                </li>
+              </ul>
+              <div class="come__content-img">
+                <img src="./assets/come-1.jpg" alt="">
+              </div>
+              <ul class="come__list">
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    У меня довольно старая наболевшая киста
+                  </span>
+                </li>
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    Зуб болит при надкусывании
+                  </span>
+                </li>
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    Застревает пища
+                  </span>
+                </li>
+                <li class="come__list-item">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="url(#paint0_linear_2156_561)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2156_561" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#24D3BF" />
+                        <stop offset="1" stop-color="#1894C8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="come__list-text">
+                    У меня ребёнок-подросток с плохо вылеченными зубами, которому еще рано удалять зуб и ставить имплант
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <button class="come__btn" data-reception-btn>
+              Записаться на БЕСПЛАТНЫЙ
+осмотр стоматолога
+            </button>
+          </div>
+        </section>
+        <section class="get">
+          <div class="container get__container">
+            <img src="./assets/get-bg-1.png" alt="" class="get__bg-1">
+            <img src="./assets/get-bg-2.png" alt="" class="get__bg-2">
+            <h2 class="get__title">Что вы получите?</h2>
+            <ul class="get__list">
+              <li class="get__list-item">
+                <img src="./assets/get-1.jpg" alt="">
+                <span class="get__list-text">Спасём зуб с вероятностью 84%, даже если другой врач велел удалять и сказал, что киста огромна</span>
+              </li>
+              <li class="get__list-item">
+                <img src="./assets/get-2.jpg" alt="">
+                <span class="get__list-text">Гарантия 3 года.
+                  Поставим имплант БЕСПЛАТНО в гарантийном случае! (но такого ещё не случалось)</span>
+              </li>
+              <li class="get__list-item">
+                <img src="./assets/get-3.jpg" alt="">
+                <span class="get__list-text">До 25 лет в среднем прослужит полностью пролеченный зуб</span>
+              </li>
+              <li class="get__list-item">
+                <img src="./assets/get-4.jpg" alt="">
+                <span class="get__list-text">Вылечим в 1-3 приёма, уберём боль в ПЕРВЫЙ приём</span>
+              </li>
+            </ul>
+            <div class="get__line"></div>
+          </div>
+        </section>
+        <section class="work">
+          <div class="container work__container">
+            <h2 class="work__title">Какие ещё выгоды при работе с нами?</h2>
+            <ul class="work__list">
+              <li class="work__list-item step-1">
+                <img src="./assets/work-01-1.png" alt="" class="work__list-item-bg-1">
+                <img src="./assets/work-01-2.png" alt="" class="work__list-item-bg-2">
+                <span class="work__list-item-title">
+                  <span class="work__list-item-number">01</span>
+                  <span class="work__list-item-title-text">Вылечим от 9550 ₽</span>
+                </span>
+                <div class="work__list-content">
+                  <img src="./assets/work-1.jpg" class="work__List-content-img" alt="">
+                  <ul class="work__list-inner">
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Лечим кисты любого размера и любой сложности
+                      </span>
+                    </li>
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Даже такие, с которыми не справились другие врачи
+                      </span>
+                    </li>
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Есть рассрочка 0% от клиники, без банков
+                      </span>
+                    </li>
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Можем помочь оформить налоговый вычет
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="work__list-form">
+                  <form class="work__list-form-wrapper" data-reception-form>
+                    <span class="work__list-form-title">Запишитесь на БЕСПЛАТНЫЙ осмотр стоматолога — осмотрим вас или вашего ребёнка, оценим ситуацию, поймём объём и цену работ</span>
+
+                    <div class="work__list-form-fields">
+                      <input class="work__list-form-input" type="text" name="phone" placeholder="Ваш телефон*">
+                      <button type="submit" class="work__list-form-btn">Записаться</button>
+                    </div>
+                    <label class="worl__list-form-politic">
+                      <input type="checkbox" checked name="politic" checked value="politic">
+                      <span class="work__list-form-politic-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span> 
+                    </label>
+                  </form>
+                </div>
+              </li>
+              <li class="work__list-item step-2">
+                <img src="./assets/work-02-1.png" alt="" class="work__list-item-bg-1">
+                <img src="./assets/work-02-2.png" alt="" class="work__list-item-bg-2">
+                <span class="work__list-item-title">
+                  <span class="work__list-item-number">02</span>
+                  <span class="work__list-item-title-text">Лечим под микроскопом</span>
+                </span>
+                <div class="work__list-content">
+                  <img src="./assets/work-2.jpg" class="work__List-content-img" alt="">
+                  <ul class="work__list-inner">
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Вычистим все каналы на 100% за счёт увеличения в
+7-10 раз
+                      </span>
+                    </li>
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Достанем мелкие обломки сломанных инструментов, если такие остались после предыдущего лечения
+                      </span>
+                    </li>
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Запломбируем все каналы и перешейки идеально на 100% без пустот
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="work__list-form">
+                  <form class="work__list-form-wrapper" data-reception-form>
+                    <span class="work__list-form-title">Запишитесь на БЕСПЛАТНЫЙ осмотр стоматолога — осмотрим вас или вашего ребёнка, оценим ситуацию, поймём объём и цену работ</span>
+
+                    <div class="work__list-form-fields">
+                      <input class="work__list-form-input" type="text" name="phone" placeholder="Ваш телефон*">
+                      <button type="submit" class="work__list-form-btn">Записаться</button>
+                    </div>
+                    <label class="worl__list-form-politic">
+                      <input type="checkbox" checked name="politic" checked value="politic">
+                      <span class="work__list-form-politic-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span> 
+                    </label>
+                  </form>
+                </div>
+              </li>
+              <li class="work__list-item">
+                <img src="./assets/work-03-1.png" alt="" class="work__list-item-bg-1">
+                <img src="./assets/work-03-2.png" alt="" class="work__list-item-bg-2">
+                <span class="work__list-item-title">
+                  <span class="work__list-item-number">03</span>
+                  <span class="work__list-item-title-text">Без боли!</span>
+                </span>
+                <div class="work__list-content">
+                  <img src="./assets/work-3.jpg" class="work__List-content-img" alt="">
+                  <ul class="work__list-inner">
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        Вылечим БЕЗ боли, с самой лучшей анестезией
+                      </span>
+                    </li>
+                    <li class="work__list-inner-item">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_2246_64)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_2246_64" x1="10" y1="20" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1894C8" />
+                            <stop offset="1" stop-color="#18D9C3" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <span class="work__list-inner-item-text">
+                        И даже смажем десну анестетиком перед уколом
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="work__list-form">
+                  <form class="work__list-form-wrapper" data-reception-form>
+                    <span class="work__list-form-title">Запишитесь на БЕСПЛАТНЫЙ осмотр стоматолога — осмотрим вас или вашего ребёнка, оценим ситуацию, поймём объём и цену работ</span>
+
+                    <div class="work__list-form-fields">
+                      <input class="work__list-form-input" type="text" name="phone" placeholder="Ваш телефон*">
+                      <button type="submit" class="work__list-form-btn">Записаться</button>
+                    </div>
+                    <label class="worl__list-form-politic">
+                      <input type="checkbox" checked name="politic" checked value="politic">
+                      <span class="work__list-form-politic-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span> 
+                    </label>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="steps">
+          <div class="container steps__container">
+            <h2 class="steps__title">6 этапов работы</h2>
+            <ul class="steps__list">
+              <li class="steps__list-item step-1">
+                <div class="steps__list-item-img">
+                  <img src="./assets/steps-1.jpg" alt="">
+                </div>
+                <span class="steps__list-item-text">
+                  Сделаем анестезию
+                </span>
+                <img src="./assets/steps-arrow.png" alt="" class="steps__list-item-arrow">
+              </li>
+              <li class="steps__list-item step-2">
+                <div class="steps__list-item-img">
+                  <img src="./assets/steps-2.jpg" alt="">
+                </div>
+                <span class="steps__list-item-text">
+                  Вычистим каналы от пломбировочного материала, микробов и грязи
+                </span>
+                <img src="./assets/steps-arrow.png" alt="" class="steps__list-item-arrow">
+              </li>
+              <li class="steps__list-item step-3">
+                <div class="steps__list-item-img">
+                  <img src="./assets/steps-3.jpg" alt="">
+                </div>
+                <span class="steps__list-item-text">
+                  Промоем антисептиками
+                </span>
+                <img src="./assets/steps-arrow.png" alt="" class="steps__list-item-arrow">
+              </li>
+              <li class="steps__list-item step-4">
+                <div class="steps__list-item-img">
+                  <img src="./assets/steps-4.jpg" alt="">
+                </div>
+                <span class="steps__list-item-text">
+                  Положим лекарство для восстановления костной ткани и уничтожения микробов
+                </span>
+                <img src="./assets/steps-arrow.png" alt="" class="steps__list-item-arrow">
+              </li>
+              <li class="steps__list-item step-5">
+                <div class="steps__list-item-img">
+                  <img src="./assets/steps-5.jpg" alt="">
+                </div>
+                <span class="steps__list-item-text">
+                  Через 1-2 недели запломбируем каналы и поставим пломбы
+                </span>
+                <img src="./assets/steps-arrow.png" alt="" class="steps__list-item-arrow">
+              </li>
+              <li class="steps__list-item step-6 ">
+                <div class="steps__list-item-img">
+                  <img src="./assets/steps-6.jpg" alt="">
+                </div>
+                <span class="steps__list-item-text">
+                  Покроем коронкой для защиты зуба от разрушений и новых инфекций
+                </span>                     
+                <img src="./assets/steps-arrow.png" alt="" class="steps__list-item-arrow">
+              </li>
+            </ul>
+          </div>
+        </section>
+         <section class="view">
+          <div class="container view__container">
+            <h2 class="view__title">Запишитесь к нам на
+              бесплатный осмотр стоматолога</h2>
+              <div class="view__content">
+                <ul class="view__list">
+                  <li class="view__list-item">
+                    <img src="./assets/view-check.png" alt="">
+                    Вы расскажете про ситуацию, мы осмотрим вас или вашего ребёнка
+                  </li>
+                  <li class="view__list-item">
+                    <img src="./assets/view-check.png" alt="">
+                    Мы оценим клиническую ситуацию
+                  </li>
+                  <li class="view__list-item">
+                    <img src="./assets/view-check.png" alt="">
+                    Составим план лечения, расскажем об этапах процесса, поймём цену
+                  </li>
+                  <li class="view__list-item">
+                    <img src="./assets/view-check.png" alt="">
+                    Ответим на волнующие вас вопросы и расскажем о похожих случаях
+                  </li>
+                </ul>
+                <div class="view__img-box">
+                  <img src="./assets/view-1.jpg" alt="">
+                  <span class="view__img-pin">Осмотр БЕСПЛАТЕН и ни к чему вас не обязывает!</span>
+                </div>
+              </div>
+              <div class="work__list-form">
+                <form class="work__list-form-wrapper" data-reception-form>
+                  <span class="work__list-form-title">Запишитесь на БЕСПЛАТНЫЙ осмотр стоматолога — осмотрим вас или вашего ребёнка, оценим ситуацию, поймём объём и цену работ</span>
+
+                  <div class="work__list-form-fields">
+                    <input class="work__list-form-input" type="text" name="phone" placeholder="Ваш телефон*">
+                    <button type="submit" class="work__list-form-btn">Записаться</button>
+                  </div>
+                  <label class="worl__list-form-politic">
+                    <input type="checkbox" checked name="politic" checked value="politic">
+                    <span class="work__list-form-politic-text">Я даю согласие на обработку персональных данных в соответствии с <a href="/privacy-policy.html">Политикой</a></span> 
+                  </label>
+                </form>
+              </div>
+          </div>
+         </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__links">
+            <a href="/" class="footer__logo">
+              <img src="./assets/header-logo.png" alt="">
+            </a>
+            <ul class="footer__links-list">
+              <li class="footer__links-item">
+                <a href="#" class="footer__link">Политика обработки персональных данных</a>
+              </li>
+              <li class="footer__links-item">
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer__text">
+            Лечение кисты зубов
+под микроскопом в Самаре
+          </p>
+          <div class="footer__btns">
+            <div class="footer__phone">
+              <span class="footer__phone-name">Звоните</span>
+              <a href="tel:+78463757205" class="footer__phone-number">
+                <img src="./assets/footer-phone.png" alt="">
+                +7 (846) 375-72-05</a>
+            </div>
+            <button class="footer__btn" data-call-btn>Заказать звонок</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./scripts/quiz.js"></script>
+  </body>
+</html>
+
