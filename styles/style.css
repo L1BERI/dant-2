@@ -5,6 +5,10 @@
 body {
   background: #fff;
   min-width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 img {
