@@ -164,7 +164,7 @@ img {
   padding-top: clamp(25px, 3vw, 50px);
   padding-bottom: clamp(25px, 3vw, 40px);
   background: linear-gradient(90deg, #1894c8 0%, rgba(36, 211, 191, 0.6) 100%),
-    url("./../assets/hero-bg.png") no-repeat center;
+    url("./../assets/hero-bg.png") no-repeat center/cover;
 }
 
 .hero__container {
@@ -329,15 +329,15 @@ img {
 .calc__bg-1{
   position: absolute;
   z-index: 0;
-  left: -45%;
-  top: 50%;
+  left: -43%;
+  top: 55%;
   transform: translateY(-50%);
 }
 .calc__bg-2{
   position: absolute;
   z-index: 0;
-  right: -30%;
-  top: 50%;
+  right: -33%;
+  top: 56%;
   transform: translateY(-50%);
 }
 .calc__title {
@@ -360,7 +360,7 @@ img {
 
 .quiz {
   width: 100%;
-  padding: 20px;
+  padding: clamp(5px, 1.5vw, 20px);
   border: 3px solid rgba(50, 184, 219, 0.3);
   border-radius: 30px;
   display: flex;
@@ -872,16 +872,16 @@ button:active {
 
 .get__bg-1 {
   position: absolute;
-  left: -30%;
-  top: 50%;
+  left: -43%;
+  top: 48%;
   transform: translateY(-50%);
   z-index: -1;
 }
 
 .get__bg-2 {
   position: absolute;
-  right: -30%;
-  bottom: 0;
+  right: -46%;
+  top: 7%;
   z-index: -1;
 }
 
@@ -1584,7 +1584,7 @@ button:active {
   font-size: clamp(16px, 1.5vw, 20px);
   color: #fff;
 }
-* { outline: 1px solid red; }
+
 .footer__phone-number {
   display: flex;
   align-items: center;
