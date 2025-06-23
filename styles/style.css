@@ -4,7 +4,7 @@
 
 body {
   background: #fff;
-  min-width: 375px;
+  /* min-width: 375px; */
 }
 
 img {
@@ -20,7 +20,7 @@ img {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
-  min-width: 375px;
+  /* min-width: 375px; */
 }
 
 .container {
@@ -894,7 +894,14 @@ button:active {
     right: -50%;
   }
 }
-
+@media (max-width: 600px){
+  .get__bg-1 {
+    display: none;
+  }
+  .get__bg-2 {
+    display: none;
+  }
+}
 .get__title {
   font-family: var(--font-family);
   font-weight: 400;
