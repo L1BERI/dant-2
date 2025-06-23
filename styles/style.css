@@ -26,6 +26,7 @@ img {
 
 .container {
   max-width: 1250px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -1087,12 +1088,14 @@ button:active {
     margin-left: 0;
     border-radius: 35px 10px 10px 35px;
     padding: 20px 10px;
+      display: none;
   }
 
   .work__list-item-number {
     left: 0;
     width: 60px;
     height: 60px;
+  
   }
 }
 
