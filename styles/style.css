@@ -94,6 +94,7 @@ img {
   width: 1px;
   background-color: #333030;
   display: block;
+  flex-shrink: 0;
 }
 
 .header__content {
