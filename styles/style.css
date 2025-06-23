@@ -1,10 +1,12 @@
 :root {
   --font-family: "HelveticaNeueCyr", sans-serif;
 }
-
+html{
+  scroll-behavior: smooth !important;
+}
 body {
   background: #fff;
-  /* min-width: 375px; */
+  min-width: 375px;
 }
 
 img {
@@ -162,18 +164,27 @@ img {
 
 
 .hero {
-  padding-top: clamp(25px, 3vw, 50px);
+  padding-top: clamp(25px, 3vw, 35px);
   padding-bottom: clamp(25px, 3vw, 40px);
   background: linear-gradient(90deg, #1894c8 0%, rgba(36, 211, 191, 0.6) 100%),
     url("./../assets/hero-bg.png") no-repeat center/cover;
+    overflow: hidden;
 }
 
 .hero__container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+
 }
 
+.hero__person{
+  position: absolute;
+  z-index: 0;
+  left: -121px;
+  bottom: -40px;
+}
 .hero__upper {
   max-width: 803px;
   width: 100%;
@@ -181,6 +192,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-bottom: clamp(20px, 2vw, 35px);
+  z-index: 1;
 }
 
 .hero__title {
@@ -218,6 +230,7 @@ img {
   align-items: center;
   padding-left: clamp(50px, 8vw, 140px);
   margin-bottom: clamp(50px, 4vw, 80px);
+  z-index: 1;
 }
 
 .hero__teeth-list {
@@ -282,6 +295,7 @@ img {
   gap: clamp(25px, 4vw, 50px);
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .hero__btn-cost,
@@ -305,20 +319,37 @@ img {
     gap: 20px;
     padding-left: 0;
   }
+  .hero__person{
+    left: -150px;
+  }
 }
 
 @media (max-width: 516px) {
   .hero__middle {
     margin-bottom: 20px;
   }
-
+.hero__person{
+  left: 27px;
+  bottom: 290px;
+}
   .hero__bottom {
     flex-direction: column;
     gap: 10px;
   }
 }
 
-
+@media (max-width: 400px) {
+  .hero__person{
+    left: -20px;
+    bottom: 250px;
+  }
+}
+@media (max-width: 376px) {
+  .hero__person{
+    left: -20px;
+    bottom: 350px;
+  }
+}
 .calc {
   padding: 50px 0;
 
@@ -1658,7 +1689,9 @@ button:active {
   background-color: #fff;
   border-radius: 30px;
 }
-
+.modal__quiz .quiz{
+  padding: 15px;
+}
 .modal__reception-inner,
 .modal__call-inner {
   max-width: 700px;

@@ -142,14 +142,14 @@ class Quiz {
             this.renderQuestion();
             this.updateProgress();
             this.updateNavigationButtons();
-            if (window.innerWidth < 500) {
+            if (window.innerWidth < 600) {
                 this.root.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         } else {
             this.currentStep++;
             this.renderQuestion();
             this.updateNavigationButtons();
-            if (window.innerWidth < 500) {
+            if (window.innerWidth < 600) {
                 this.root.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
