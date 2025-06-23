@@ -449,6 +449,13 @@ img {
   }
 }
 
+@media (max-width: 600px){
+  .calc__bg-1,
+  .calc__bg-2{
+    display: none;
+  }
+}
+
 @media (max-width: 486px) {
   .quiz__answers {
     display: flex;
@@ -1079,10 +1086,13 @@ button:active {
   .work__list-item-title {
     margin-left: 0;
     border-radius: 35px 10px 10px 35px;
+    padding: 20px 10px;
   }
 
   .work__list-item-number {
     left: 0;
+    width: 60px;
+    height: 60px;
   }
 }
 
