@@ -5,10 +5,6 @@
 body {
   background: #fff;
   min-width: 375px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
 }
 
 img {
@@ -20,12 +16,11 @@ img {
 #app {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
-    min-width: 375px;
+  min-width: 375px;
 }
 
 .container {
@@ -1092,7 +1087,6 @@ button:active {
     margin-left: 0;
     border-radius: 35px 10px 10px 35px;
     padding: 20px 10px;
-      display: none;
   }
 
   .work__list-item-number {
@@ -1372,14 +1366,12 @@ button:active {
     width: 100%;
   }
 
-    .step-1 .steps__list-item-arrow,
-    .step-3 .steps__list-item-arrow,
-  .step-6 .steps__list-item-arrow {
-    display: none;
-  }
 
+  .step-1 .steps__list-item-arrow,
   .step-2 .steps__list-item-arrow,
+  .step-3 .steps__list-item-arrow,
   .step-4 .steps__list-item-arrow,
+  .step-5 .steps__list-item-arrow,
   .step-6 .steps__list-item-arrow {
     display: none;
   }
@@ -1499,7 +1491,7 @@ button:active {
 @media (max-width:1286px) {
   .view__img-pin {
     top: -25px;
-    right: -10px;
+    right: 10px;
   }
 }
 
@@ -1585,7 +1577,7 @@ button:active {
   font-size: clamp(16px, 1.5vw, 20px);
   color: #fff;
 }
-
+* { outline: 1px solid red; }
 .footer__phone-number {
   display: flex;
   align-items: center;
