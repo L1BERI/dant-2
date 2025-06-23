@@ -21,6 +21,7 @@ img {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
+    min-width: 375px;
 }
 
 .container {
@@ -903,7 +904,12 @@ button:active {
   max-width: 1000px;
   width: 100%;
 }
-
+@media (max-width: 600px){
+  .get__list{
+    display: flex;
+    flex-direction: column;
+  }
+}
 .get__list-item {
   display: flex;
   flex-direction: column;
@@ -1342,7 +1348,32 @@ button:active {
     display: none;
   }
 }
+@media (max-width:600px) {
+  .steps__list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
+    .step-1 .steps__list-item-arrow,
+    .step-3 .steps__list-item-arrow,
+  .step-6 .steps__list-item-arrow {
+    display: none;
+  }
+
+  .step-2 .steps__list-item-arrow,
+  .step-4 .steps__list-item-arrow,
+  .step-6 .steps__list-item-arrow {
+    display: none;
+  }
+  .steps__list-item-img img{
+    width: 100%;
+  }
+  .steps__list-item-text{
+    max-width: none;
+    width: 100%;
+  }
+}
 @media (max-width: 470px) {
   .steps__list {
     column-gap: 50px;
