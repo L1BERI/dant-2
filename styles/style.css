@@ -6,23 +6,23 @@ html{
 }
 body {
   background: #fff;
- 
+  min-width: 375px;
 }
-
 img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
-
 #app {
   width: 100%;
   min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
-  min-width: 375px;
 }
 
 .container {
