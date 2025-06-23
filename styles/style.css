@@ -6,7 +6,7 @@ html{
 }
 body {
   background: #fff;
-  min-width: 375px;
+ 
 }
 
 img {
@@ -22,7 +22,7 @@ img {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
-  /* min-width: 375px; */
+  min-width: 375px;
 }
 
 .container {
