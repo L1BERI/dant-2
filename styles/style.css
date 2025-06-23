@@ -1513,7 +1513,7 @@ button:active {
   justify-content: center;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(16px, 1.5vw, 20px);
+  font-size: clamp(12px, 1.5vw, 20px);
   text-align: center;
   color: #fff;
   padding: 8px;
@@ -1528,8 +1528,17 @@ button:active {
 
 @media (max-width:1286px) {
   .view__img-pin {
-    top: -25px;
-    right: 10px;
+    top: -45px;
+    right: 0px;
+  }
+}
+@media (max-width:900px) {
+  .view__img-pin {
+   
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    top: 0;
   }
 }
 
